@@ -83,6 +83,14 @@ searcher.setMax_search_depth(20);
 searcher.setReport_save_path("D:\\apache-tomcat-7.0.94\\bin");
 searcher.searchObject();
 ```
+关于对象寻找：
+```java
+me.gv7.tools.josearcher.searcher.SearchObjectByBFS s = new me.gv7.tools.josearcher.searcher.SearchObjectByBFS(Thread.currentThread(),2024024355);
+s.setReport_save_path("D:\\logs");
+s.setMax_search_depth(10);
+s.searchObject();
+```
+
 
 ## 0x04 更多
 * [半自动化挖掘request实现多种中间件回显](http://gv7.me/articles/2020/semi-automatic-mining-request-implements-multiple-middleware-echo/)
