@@ -6,12 +6,14 @@ public class NodeT {
     private String field_name;
     private Object field_object;
     private int current_depth;
+    private Object pre_field_object;
 
     public NodeT(Builder builder){
         this.chain = builder.chain;
         this.field_name = builder.field_name;
         this.field_object = builder.field_object;
         this.current_depth = builder.current_depth;
+        this.pre_field_object = builder.pre_field_object;
     }
 
     public String getChain() {
@@ -38,6 +40,14 @@ public class NodeT {
         this.field_object = field_object;
     }
 
+    public Object getPre_filed_object() {
+        return pre_field_object;
+    }
+
+    public void setPre_field_object(Object field_object) {
+        this.pre_field_object = field_object;
+    }
+
     public int getCurrent_depth() {
         return current_depth;
     }
@@ -51,6 +61,7 @@ public class NodeT {
         private String field_name;
         private Object field_object;
         private int current_depth;
+        private Object pre_field_object;
 
         public Builder setChain(String chain) {
             this.chain = chain;
@@ -64,6 +75,11 @@ public class NodeT {
 
         public Builder setField_object(Object field_object) {
             this.field_object = field_object;
+            return this;
+        }
+
+        public Builder setPre_filed_object(Object pre_field_object){
+            this.pre_field_object = pre_field_object;
             return this;
         }
 
