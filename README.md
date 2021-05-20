@@ -83,12 +83,16 @@ searcher.setMax_search_depth(20);
 searcher.setReport_save_path("D:\\apache-tomcat-7.0.94\\bin");
 searcher.searchObject();
 ```
-关于对象寻找：
+关于新增的对象寻找：
 ```java
-me.gv7.tools.josearcher.searcher.SearchObjectByBFS s = new me.gv7.tools.josearcher.searcher.SearchObjectByBFS(Thread.currentThread(),2024024355);
+me.gv7.tools.josearcher.searcher.SearchObjectByBFS s = new me.gv7.tools.josearcher.searcher.SearchObjectByBFS(Thread.currentThread(),1905487603);
+java.util.List<me.gv7.tools.josearcher.entity.Blacklist> blacklists = new java.util.ArrayList<>();
+blacklists.add(new me.gv7.tools.josearcher.entity.Blacklist.Builder().setField_name("threads").build());
 s.setReport_save_path("D:\\logs");
-s.setMax_search_depth(10);
+s.setBlacklists(blacklists);
+s.setMax_search_depth(15);
 s.searchObject();
+s.getResult();
 ```
 
 
